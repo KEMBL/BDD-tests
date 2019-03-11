@@ -4,6 +4,10 @@
         "tslint:recommended"
     ],
     "jsRules": {},
-    "rules": {},
+    "rules": {
+        "no-var-requires": false,
+        "no-console": true,
+        "object-literal-sort-keys": false
+    },
     "rulesDirectory": []
 }

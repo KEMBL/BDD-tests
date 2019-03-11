@@ -1,32 +1,78 @@
-# cucumber-ts-starter
-Starter project to write and debug cucumber-js features in TypeScript language.
+### It is a CLONE of Protractor-Cucumber-TypeScript project
 
-## After cloning the repo
+This project was made in education purposes
 
-* run the command `npm install`.
+More about source project: https://github.com/igniteram/protractor-cucumber-typescript
 
-## To execute the tests locally
+### BDD playground tests Setup Guide   
 
-* run the command `npm test`.
+### To Get Started
 
-## To debug a scenario in Visual Studio Code
+#### Pre-requisites
+1.NodeJS installed globally in the system.
+https://nodejs.org/en/download/
 
-* tag the scenario with `@only` and `@debug`
-* set the breakpoints in the typescript code
-* Start debugging
+2.Chrome or Firefox browsers installed.
 
-## To run only specific scenarios
+3.Text Editor(Optional) installed-->Sublime/Visual Studio Code/Brackets.
 
-* tag the scenario(s) with `@only`
+4. Install Java https://www.java.com/en/download/
 
-## To ignore a scenario
+#### Setup Scripts
+* Clone the repository into a folder
+* Go inside the folder and run following command from terminal/command prompt
+```
+npm install 
+```
+* All the dependencies from package.json and ambient typings would be installed in node_modules folder.
 
-* tag the scenario with `@ignore`
+#### Run Scripts
 
-## To check for typescript and linting errors
+* First step is to fire up the selenium server which could be done in many ways,  **webdriver-manager** proves very handy for this.The below command should download the **chrome & gecko driver** binaries locally for you!
 
-* run the command `npm run build`.
+```
+npm run webdriver-update
+``` 
 
-## To view the html report of the last run
+* Then you should start your selenium server!
+```
+npm run webdriver-start
+```
 
-* run the command `npm run report`.
+* The below command would create an output folder named 'typeScript' and transpile the .ts files to .js.
+```
+npm run build
+```
+
+* Now just run the test command which launches the Chrome Browser and runs the scripts.
+```
+npm test
+```
+
+#### Features
+
+This feature is written for site http://kembl.ru/stencil/
+
+Features reside in /features
+
+Step definitions reside in /stepdefinitions
+
+```
+Feature: Git .ignore button prototype on site
+
+I want that button opens dropdown list
+@StencilJSScenario
+Scenario: Click on button after site opens
+	Given I am on playground page
+	When I am searching for Git .ignore button on page
+	Then I click Git .ignore button on page
+	Then I should see dropdown list
+```
+
+## License
+```   
+MIT License
+
+Copyright: Copied and changed according to Mit License, previous Copyright (c) 2019 Ram Pasala
+```
+
