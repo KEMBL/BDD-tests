@@ -1,4 +1,4 @@
-### It is a CLONE of Protractor-Cucumber-TypeScript project
+### It is a changed CLONE of Protractor-Cucumber-TypeScript project
 
 This project was made in education purposes
 
