@@ -24,9 +24,9 @@ export class SearchPageObjects {
     }
 
     const searchPopUp = popupWindow.element(
-      by.css_sr("::sr div.popupWindow--visible")
+      by.css_sr("::sr div.popupWindow")
     );
-    return await searchPopUp.isPresent();
+    return await searchPopUp.isDisplayed();
   };
 
   addShadowRootLocator() {
